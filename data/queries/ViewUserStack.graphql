@@ -1,0 +1,76 @@
+query ViewUserStack {
+  viewUserStack {
+    numClasses
+    totalTime
+    ... on StackResponseSuccess {
+      numClasses
+      totalTime
+      userStack {
+        stackedClassList {
+          playOrder
+          pelotonClass {
+            joinToken
+            title
+            classId
+            fitnessDiscipline {
+              slug
+              __typename
+            }
+            assets {
+              thumbnailImage {
+                location
+                __typename
+              }
+              __typename
+            }
+            duration
+            ... on OnDemandInstructorClass {
+              joinToken
+              title
+              fitnessDiscipline {
+                slug
+                displayName
+                __typename
+              }
+              contentFormat
+              totalUserWorkouts
+              originLocale {
+                language
+                __typename
+              }
+              captions {
+                locales
+                __typename
+              }
+              timeline {
+                startOffset
+                __typename
+              }
+              difficultyLevel {
+                slug
+                displayName
+                __typename
+              }
+              airTime
+              instructor {
+                name
+                __typename
+              }
+              __typename
+            }
+            classTypes {
+              name
+              __typename
+            }
+            playableOnPlatform
+            __typename
+          }
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}

@@ -1,0 +1,62 @@
+mutation ModifyStack($input: ModifyStackInput!) {
+  modifyStack(input: $input) {
+    numClasses
+    totalTime
+    userStack {
+      stackedClassList {
+        playOrder
+        pelotonClass {
+          ...ClassDetails
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+
+fragment ClassDetails on PelotonClass {
+  joinToken
+  title
+  classId
+  fitnessDiscipline {
+    slug
+    __typename
+  }
+  assets {
+    thumbnailImage {
+      location
+      __typename
+    }
+    __typename
+  }
+  duration
+  ... on OnDemandInstructorClass {
+    title
+    fitnessDiscipline {
+      slug
+      displayName
+      __typename
+    }
+    contentFormat
+    difficultyLevel {
+      slug
+      displayName
+      __typename
+    }
+    airTime
+    instructor {
+      name
+      __typename
+    }
+    __typename
+  }
+  classTypes {
+    name
+    __typename
+  }
+  playableOnPlatform
+  __typename
+}
