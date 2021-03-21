@@ -4,7 +4,7 @@ cli that syncs a Peloton Cycle stack with the hcotf google sheet of classes
 
 # How do I use it
 
-- Download the latest program for either [windows](link), [linux](link), or [Mac OS](link)
+- Download the latest program for either [Windows](link), [Linux](link), or [Mac OS](link)
 - Run it using the following format:
 
 `hcotf-cli -username <YOURUSERNAME> -password <YOURPASSWORD>`
