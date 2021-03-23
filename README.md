@@ -5,7 +5,7 @@ cli that syncs a Peloton Cycle stack with the hcotf google sheet of classes
 # How do I use it
 
 - Download the latest program for either
-  [Windows](https://github.com/caesarshift/hcotf-cli/releases/download/v0.1/windows.zip), [Linux](https://github.com/caesarshift/hcotf-cli/releases/download/v0.1/linux.zip), or [Mac OS](https://github.com/caesarshift/hcotf-cli/releases/download/v0.1/darwin.zip)
+  [Windows](https://github.com/caesarshift/hcotf-cli/releases/download/v0.2/windows.zip), [Linux](https://github.com/caesarshift/hcotf-cli/releases/download/v0.2/linux.zip), or [Mac OS](https://github.com/caesarshift/hcotf-cli/releases/download/v0.2/darwin.zip)
 - Extract the hcotf-cli program from the zipped folder
 - Run the program from the command line using the following format:
 
