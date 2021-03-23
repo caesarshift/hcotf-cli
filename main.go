@@ -11,9 +11,15 @@ import "google.golang.org/api/sheets/v4"
 import "google.golang.org/api/option"
 
 func main() {
+	currentTime := time.Now()
 
 	username := flag.String("username", "", "Peloton email or username")
 	password := flag.String("password", "", "Peloton password")
+	currentDay := flag.String(
+		"date",
+		currentTime.Format("1/02/2006"),
+		"Optional. Load this date from spreadsheet instead of using today",
+	)
 
 	flag.Parse()
 
@@ -22,10 +28,12 @@ func main() {
 		log.Fatalf("Use format 'hcotf-cli -username YOURUSERNAME -password YOURPASSWORD'")
 	}
 
-	currentTime := time.Now()
-	currentDay := currentTime.Format("1/02/2006")
+	_, err := time.Parse("1/02/2006", *currentDay)
+	if err != nil {
+		log.Fatalf("Unable to parse entered date. Use format mm/dd/yyyy. Entered: %s", *currentDay)
+	}
 
-	fmt.Printf("Today is: %s\n", currentDay)
+	fmt.Printf("Today is: %s\n", *currentDay)
 
 	ps := NewPelotonSession(*username, *password)
 	pt := NewPelotonStack(ps.Session)
@@ -67,7 +75,7 @@ func main() {
 	curClassIds := []string{}
 
 	for _, row := range resp.Values {
-		if row[0] == currentDay && len(row) >= 7 {
+		if row[0] == *currentDay && len(row) >= 7 {
 			m, err := url.ParseQuery(row[6].(string))
 			if err != nil {
 				log.Printf("Unable to parse row from today: %s - %s", row[6].(string), err)
