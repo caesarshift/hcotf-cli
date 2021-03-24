@@ -7,12 +7,31 @@ CLI that syncs a Peloton Cycle stack with the "hardCORE On The Floor" google she
 - Download the latest program for either
   [Windows](https://github.com/caesarshift/hcotf-cli/releases/download/v0.2/windows.zip), [Linux](https://github.com/caesarshift/hcotf-cli/releases/download/v0.2/linux.zip), or [Mac OS](https://github.com/caesarshift/hcotf-cli/releases/download/v0.2/darwin.zip)
 - Extract the hcotf-cli program from the zipped folder
-- Run the program from the command line using the following format:
+- Run the program from the command line (see below if you've never done this before) using the following format:
 
 `hcotf-cli -username YOURUSERNAME -password YOURPASSWORD`
 
 Where `YOURUSERNAME` is your Peloton username or email address, and `YOURPASSWORD` is your Peloton
 password.
+
+# Windows - How to install/run a program from the "command line"
+
+- If you've never used a command program before, install it on your Desktop, so you can easily find
+  it.
+- To open cmd.exe ("command line), open File Explorer and navigate to the Desktop
+- Type "cmd" into the File Explorer navigator and hit enter
+- A cmd.exe window opens with the Desktop as the current working directory
+
+[](hcotf-cli-windows-help.gif)
+
+# MacOS - How to run a program from the "command line"
+
+- Open the app named "Terminal" which will open a command window
+- Navigate to the folder that contains hcotfl-cli by using `cd` (e.g., `cd ~/Downloads/darwin`)
+
+# Linux - How to run a program from the "command line"
+
+- You installed your OS from the command line. You got this down already.
 
 # Load a specific date
 
