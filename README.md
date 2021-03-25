@@ -22,7 +22,7 @@ password.
 - Type "cmd" into the File Explorer navigator and hit enter
 - A cmd.exe window opens with the Desktop as the current working directory
 
-[](hcotf-cli-windows-help.gif)
+![](hcotf-cli-windows-help.gif)
 
 # MacOS - How to run a program from the "command line"
 
@@ -40,7 +40,7 @@ If you want to load an alternate date's classes, use the `date` parameter. Examp
 `hcotf-cli -username YOURUSERNAME -password YOURPASSWORD -date 3/23/2021`
 
 NOTE: the specified date must match the sheet date _exactly_. For example, `-date 3/23/2021` will
-work. `-date 03/23/2021` will not (because the google sheet has the date listed as `3/23/2021`.
+work. `-date 03/23/2021` will not (because the google sheet has the date listed as `3/23/2021`).
 
 # What it does
 
