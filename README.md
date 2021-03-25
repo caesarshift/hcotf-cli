@@ -60,3 +60,18 @@ are listed as OR, it will load both classes into your stack.
 My wife initially joined the hcotf facebook group, and I saw her having to daily locate the classes.
 When I asked her if everyone was having to do this, she said "yes", and then showed me the long list
 of people asking for a better way. This is my attempt at "a better way."
+
+# Can this automatically load my classes every day?
+
+Yes - if you're using a computer such as a desktop that you never put to sleep. You would use
+Scheduled Tasks (Windows), launchd (Mac OS), or cron (Linux), and set the program to automatically
+run every day. This is what I have done for my wife and I. Note that this typically won't work on a
+laptop because, by default, a scheduled task won't wake a computer.
+
+# Is there even an easier way than this?
+
+Possibly. I could create a website which allows a user to sign up and have it automatically update
+the stack. However, since Peloton's API is limited, I would need to store your Peloton
+username/password. While a subset of users may be ok with that, I wanted to provide a solution that
+allowed a user complete control without sharing your username/password. If there's enough interest
+for a website, I may explore that solution as well.
