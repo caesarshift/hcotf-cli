@@ -22,7 +22,7 @@ password.
 - Type "cmd" into the File Explorer navigator and hit enter
 - A cmd.exe window opens with the Desktop as the current working directory
 
-![](hcotf-cli-windows-help.gif)
+![](hcotf-cli-windows-install.gif)
 
 # MacOS - How to run a program from the "command line"
 
